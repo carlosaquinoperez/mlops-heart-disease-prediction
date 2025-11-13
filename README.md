@@ -1,4 +1,4 @@
-# MLOps Midterm Project: Cardiovascular Disease Prediction
+# MLOps Midterm Project: Cardiovascular disease prediction
 
 This repository contains the work for the MLOps Zoomcamp midterm project. The objective is to build an end-to-end machine learning pipeline to predict cardiovascular disease based on patient health metrics.
 
