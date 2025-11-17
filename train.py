@@ -9,9 +9,7 @@ from sklearn.preprocessing import FunctionTransformer
 from sklearn.model_selection import train_test_split
 from helpers import to_dicts
 
-print("--- [train.py] Script started ---")
-
-# --- 1. Define Features ---
+# 1. Define Features
 categorical_features = [
     'gender', 'cholesterol', 'glucose', 'is_smoker', 'is_alcoholic', 'is_active'
 ]
@@ -40,7 +38,7 @@ def load_and_prepare_data(filepath):
     df = df.drop(columns=['id', 'age_days'])
     
     print("Splitting data (80% train/val, 20% test)...")
-    # We split off a test set, but we train the *final* model on the rest
+    # We split off a test set, but we train the final model on the rest
     df_full_train, _ = train_test_split(df, test_size=0.2, random_state=1)
     
     return df_full_train
@@ -67,7 +65,7 @@ def create_pipeline():
     
     return final_pipeline
 
-# --- 3. Main Execution ---
+# 3. Main Execution
 if __name__ == "__main__":
     
     # Define file paths
