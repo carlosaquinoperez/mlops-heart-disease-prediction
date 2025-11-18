@@ -38,6 +38,14 @@ All experimentation and analysis can be found in `notebooks/notebook.ipynb`.
     2. `RandomForestClassifier`: **70.31% Accuracy**
 * **Final Model:** We selected `LogisticRegression` as our best model. The final model (`model.bin`) is a **`scikit-learn Pipeline`** that bundles the `StandardScaler` (for numerical data), the `DictVectorizer` (for categorical data), and the `LogisticRegression` model into a single object
 
+* **Target Analysis:** The dataset is **perfectly balanced** (50.03% `target=0` and 49.97% `target=1`).
+
+![Target Distribution](images/target_distribution.png)
+
+* **Feature Importance:** We analyzed the correlation of numerical features. `age_years` and `weight_kg` show the strongest correlation.
+
+![Correlation Heatmap](images/correlation_heatmap.png)
+
 ---
 
 ## 3. How to Run the Project (For Peer Review)
@@ -175,5 +183,5 @@ You can test the LIVE API endpoints here:
 ## 6. Limitations & Next Steps
 
 * **Model Tuning:** The RandomForest model performed worse than the baseline, likely due to a lack of hyperparameter tuning
-* **Feature Engineering:** More complex features, like Body Mass Index (BMI) from `height_cm` and `weight_kg`, could improve performance
+* **Feature Engineering:** More complex features, like Body Mass Index (BMI) from `height_cm` and `weight_kg`, could improve performance.
 * **CI/CD:** The `fly.toml` file is configured, but a full GitHub Actions workflow for continuous deployment has not been set up

@@ -33,7 +33,6 @@ class PredictResponse(BaseModel):
 
 
 # 2. Load the Model Pipeline
-
 model_file = 'model.bin'
 
 print(f"Loading model from {model_file}...")

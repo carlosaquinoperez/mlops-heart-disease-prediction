@@ -17,6 +17,7 @@ numerical_features = [
     'age_years', 'height_cm', 'weight_kg', 'systolic_bp', 'diastolic_bp'
 ]
 
+
 def load_and_prepare_data(filepath):
     """Loads, cleans, and splits the data."""
     print(f"Loading data from {filepath}...")
